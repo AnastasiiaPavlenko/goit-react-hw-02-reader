@@ -4,5 +4,4 @@ import publications from './publications.json';
 
 const App = () => <Reader items={publications} />;
 
-/* <Reader items={items} /> */
 export default App;

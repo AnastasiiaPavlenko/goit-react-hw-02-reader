@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Publication.module.css';
 
 const Publication = ({ items }) => (
@@ -9,5 +10,9 @@ const Publication = ({ items }) => (
         </p>
     </article>
 );
+
+Publication.propTypes = {
+    items: PropTypes.object.isRequired,
+};
 
 export default Publication;

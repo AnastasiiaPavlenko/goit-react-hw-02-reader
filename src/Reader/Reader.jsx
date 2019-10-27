@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Controls from '../Controls/Controls';
 import Counter from '../Counter/Counter';
 import Publication from '../Publication/Publication';
@@ -53,6 +54,10 @@ class Reader extends Component {
             <Publication items={this.props.items[this.state.publicationIdx]} />
         </div>)
     }
+};
+
+Reader.propTypes = {
+    items: PropTypes.array.isRequired,
 };
 
 export default Reader;
