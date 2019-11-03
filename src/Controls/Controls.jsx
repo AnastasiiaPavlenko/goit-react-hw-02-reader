@@ -4,8 +4,8 @@ import styles from './Controls.module.css';
 
 const Controls = ({ onIncrement, onDecrement, index }) => (
     < section className={styles.controls}>
-        <button disabled={(index === 0 || index === index.length - 1) ? true : false} type="button" className={styles.button} onClick={onDecrement}>Назад</button>
-        <button type="button" className={styles.button} onClick={onIncrement}>Вперед</button>
+        <button disabled={(index === 0) ? true : false} type="button" className={styles.button} onClick={onDecrement}>Назад</button>
+        <button disabled={(index === index.length - 1) ? true : false} type="button" className={styles.button} onClick={onIncrement}>Вперед</button>
     </section >
 );
 
