@@ -32,10 +32,13 @@ class Reader extends Component {
     };
 
     render() {
+        const index = this.state.publicationIdx;
+        const firstElement = index === 0;
+        const lastElement = index === this.props.items.length - 1;
         return (<div className={styles.reader}>
-            <Controls onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} index={this.state.publicationIdx} />
-            <Counter currentIdx={this.state.publicationIdx + 1} allProps={this.props.items.length} />
-            <Publication items={this.props.items[this.state.publicationIdx]} />
+            <Controls onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} firstElement={firstElement} lastElement={lastElement} />
+            <Counter currentIdx={index + 1} allProps={this.props.items.length} />
+            <Publication items={this.props.items[index]} />
         </div>)
     }
 };
