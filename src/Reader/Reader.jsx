@@ -38,7 +38,7 @@ class Reader extends Component {
         return (<div className={styles.reader}>
             <Controls onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} firstElement={firstElement} lastElement={lastElement} />
             <Counter currentIdx={index + 1} allProps={this.props.items.length} />
-            <Publication items={this.props.items[index]} />
+            <Publication items={this.props.items[index]} index={this.state.publicationIdx + 1} />
         </div>)
     }
 };
